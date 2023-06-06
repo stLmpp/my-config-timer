@@ -172,7 +172,7 @@ Press <kbd>Space</kbd> to {!isSubcribed ? 'start' : 'stop'}
 </h2>
 <hr />
 <div
-	class="timer font-bold text-9xl justify-center mt-4 mb-4 text-center"
+	class="timer font-bold md:text-9xl justify-center mt-4 mb-4 text-center"
 	class:text-red-600={timeRemaining === 1}
 	class:text-red-500={timeRemaining === 2}
 	class:text-red-400={timeRemaining === 3}
@@ -215,5 +215,11 @@ Press <kbd>Space</kbd> to {!isSubcribed ? 'start' : 'stop'}
 		grid-template-columns:
 			minmax(0, var(--space)) minmax(0, max-content) minmax(0, var(--space)) minmax(0, max-content)
 			minmax(0, 300px);
+	}
+
+	@media (max-width: 767px) {
+		.timer {
+			font-size: 19.5vw;
+		}
 	}
 </style>
